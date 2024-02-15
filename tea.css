@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+
+:root{
+  --primary-color:  #c98d83;
+  --secondary : #783b31;
+  --bg: #f2f1ec;
+  --black: #000;
+  --white: #fff;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+*{
+  font-family: 'Vidaloka', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+  font-size: 1.5rem;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--primary-color);
+  border-radius: 5rem;
+}
+
+section{
+  padding: 2rem 7%;
+}
+
+.heading{
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  padding: 1.2rem 0;
+  font-size: 4rem;
+}
+
+.heading span{
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+
+
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--bg);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+.header .logo{
+  /* font-size: 2.5rem; */
+  font-weight: bolder;
+  color: var(--black);
+}
+
+
+
+
+
+.team .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.team .box-container .box{
+  background: var(--white);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.team .box-container .box .image{
+  height: 35rem;
+  width: 100%;
+  padding: 1.1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.team .box-container .box .image img{
+  height: 100%;
+  width: 100%;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.team .box-container .box:hover .image img{
+  transform: scale(1.1);
+}
+
+.team .box-container .box .content{
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.team .box-container .box .content h3{
+  color: var(--black);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.team .box-container .box .content p{
+  color: var(--black);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.team .box-container .box .content .share i{
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  background: none;
+  border-radius: .5rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+  border: .1rem solid var(--primary-color);
+  margin: .5rem;
+}
+
+.team .box-container .box .content .share i:hover{
+  color: var(--white);
+  border: .1rem solid var(--secondary);
+  background: var(--secondary);
+  box-shadow: var(--box-shadow);
+  transition: .4s linear;
+  cursor: pointer;
+}
+.btn.transparent, .btn.solid:hover{
+  background-color: transparent;
+  color: #fff;
+  /* background-color: #fff;
+  color: #69bde7; */
+  /* background-color: #fff; */
+  /* color: #69bde7; */
+  color:rgb(90, 9, 9);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width: 991px){
+
+  html{
+    font-size: 55%;
+  }
+
+  .header{
+    padding: 2rem;
+  }
+
+  section{
+    padding: 2rem;
+  }
+
+}
+
+@media (max-width: 768px){
+  #menu-btn{
+    display: inline-block;
+  }
+
+  .fa-times{
+    transform: rotate(180deg);
+  }
+
+}
+
+@media (max-width: 450px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .home .slide .content h3{
+    font-size: 3rem;
+  }
+
+}
